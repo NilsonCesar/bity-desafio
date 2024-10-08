@@ -3,11 +3,6 @@ import requests, copy, time
 saldo_original = {"BRL": 10 ** 5, "BTC": 3, "USDT": 10 ** 5, "ETH": 10}
 saldo_atual = copy.deepcopy(saldo_original)
 
-def make_json(req):
-    if req.status_code == 200:
-        return req.json()
-    return None
-
 def checa_arbitragem(preco_compra, preco_venda, quantidade, moeda):
     if preco_compra < preco_venda:
             saldo_atual["BRL"] -= preco_compra
