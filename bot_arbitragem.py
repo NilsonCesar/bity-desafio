@@ -25,7 +25,6 @@ while True:
     }
 
     for moeda in bit.keys():
-        print(float(bin[moeda]["asks"][0][0]), bit[moeda]["bids"][0]["price"])
         preco_compra_bin = float(bin[moeda]["bids"][0][0])
         preco_venda_bit = bit[moeda]["asks"][0]["price"]
         quantidade_bit =  bit[moeda]["asks"][0]["amount"]
